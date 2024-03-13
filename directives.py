@@ -7,19 +7,20 @@ from strict import Strict
 from up import Up
 from xpath import Xpath
 
+
 class Directives:
     def __init__(self, text):
         self.array = [Directives.map(t) for t in self.parse_text(text)]
-    
+
     def parse_text(self, text):
         return [t for t in text.strip().split(';') if t]
-    
+
     def __iter__(self):
         return iter(self.array)
-    
+
     def __len__(self):
         return len(self.array)
-    
+
     @staticmethod
     def map(cmd):
         args = cmd.split(',')
@@ -54,4 +55,3 @@ class Directives:
             raise Exception('XSET command is not supported yet, please contribute')
         else:
             raise Exception(f'Unknown command "{cmd_name}"')
-
