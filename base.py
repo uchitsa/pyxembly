@@ -18,9 +18,10 @@ class Xembly:
             Xembly.logger.addHandler(handler)
         return Xembly.logger
 
-    # Code base abstraction
+    VERSION = '1.0.snapshot'
 
 
+# Code base abstraction
 class Base:
     # Ctor.
     # +opts+:: Options
