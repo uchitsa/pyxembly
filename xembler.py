@@ -1,6 +1,7 @@
 import logging
 from lxml import etree
 
+
 class Xembler:
     def __init__(self, dirs):
         self.dirs = dirs
@@ -13,4 +14,3 @@ class Xembler:
             logging.info(f"Applied: {dir}")
         logging.info(f"{len(self.dirs)} directive(s) applied")
         return dom
-
