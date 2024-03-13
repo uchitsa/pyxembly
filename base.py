@@ -1,4 +1,8 @@
 import logging
+import sys
+
+from directives import Directives
+from xembler import Xembler
 
 
 class Xembly:
