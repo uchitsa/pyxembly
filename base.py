@@ -1,5 +1,6 @@
 import logging
 
+
 class Xembly:
     # Get logger.
     @staticmethod
@@ -41,4 +42,3 @@ class Xembly:
                 Xembly.log().info("{} directives in command line".format(len(self.opts.arguments)))
                 dirs = ''.join(self.opts.arguments)
             return Xembler(Directives(dirs)).apply(xml).to_xml()
-
