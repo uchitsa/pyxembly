@@ -12,7 +12,8 @@ class Directives:
     def __init__(self, text):
         self.array = [Directives.map(t) for t in self.parse_text(text)]
 
-    def parse_text(self, text):
+    @staticmethod
+    def parse_text(text):
         return [t for t in text.strip().split(';') if t]
 
     def __iter__(self):
