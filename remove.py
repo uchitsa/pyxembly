@@ -2,7 +2,8 @@ import logging
 
 
 class Remove:
-    def exec(self, _, cursor):
+    @staticmethod
+    def exec(_, cursor):
         after = []
         for node in cursor:
             logging.info(f"node \"{node.name}\" removed")
