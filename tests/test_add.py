@@ -13,9 +13,18 @@ class TestAdd(TestCase):
         dom = etree.fromstring('<books/>')
         new_node = etree.Element('book')
         dom.append(new_node)
-        Add.__init__('book').exec(dom, [dom.xpath('/*').first])
+        add = Add.__init__(self, name='book')
+        add.exec(dom, [dom.xpath('/*').first])
         self.assertEqual(etree.tostring(dom), b'<books><book></books>')
 
+    class TestStringMethods(unittest.TestCase):
 
-if __name__ == '__main__':
-    unittest.main()
+        def test_upper(self):
+            self.assertEqual('foo'.upper(), 'FOO')
+
+        def test_isupper(self):
+            self.assertTrue('FOO'.isupper())
+            self.assertFalse('Foo'.isupper())
+
+    if __name__ == '__main__':
+        unittest.main()
