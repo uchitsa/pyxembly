@@ -16,3 +16,8 @@ class Add:
             after.append(child)
             logging.info(f'node "{self.name}" added to "{node.tag}"')
         return after
+
+
+if __name__ == '__main__':
+    add = Add("<books><book></books>")
+    print(add.exec("<book>"))
