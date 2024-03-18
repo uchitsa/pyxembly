@@ -49,3 +49,8 @@ class Base:
             Xembly.log().info("{} directives in command line".format(len(self.opts.arguments)))
             dirs = ''.join(self.opts.arguments)
         return Xembler(Directives(dirs)).apply(xml).to_xml()
+
+
+if __name__ == '__main__':
+    base = Base(opts=[])
+    print(base.xml())
