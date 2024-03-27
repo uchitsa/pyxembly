@@ -1,6 +1,6 @@
 from lxml.html import parse
 
-from xembly.base import Xembly
+from base import Xembly
 
 
 class Set:
