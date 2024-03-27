@@ -1,4 +1,4 @@
-from xembly.base import Base
+from base import Base
 
 
 class Strict(Base):
